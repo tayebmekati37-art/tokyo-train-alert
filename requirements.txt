@@ -1,0 +1,4 @@
+requests==2.31.0
+schedule==1.2.0
+python-dotenv==1.0.0
+APScheduler==3.10.4   # alternative to schedule, but we'll stick with schedule for simplicity

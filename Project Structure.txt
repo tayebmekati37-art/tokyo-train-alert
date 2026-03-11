@@ -1,0 +1,12 @@
+tokyo-train-alert/
+├── .env.example               # Template for environment variables
+├── .gitignore                  # Ignore .env, logs, databases
+├── README.md                   # Detailed setup & usage instructions
+├── requirements.txt            # Python dependencies
+├── config.py                   # Loads configuration from .env
+├── train_status.py             # Fetches & parses train delay data from ODPT
+├── email_alert.py              # Sends email alerts via Gmail SMTP
+├── logger.py                   # Configures logging to file and console
+├── database.py                 # Optional: SQLite logging of alert history
+├── main.py                     # Main scheduler loop
+└── alerts.log                  # Log file (created at runtime)
