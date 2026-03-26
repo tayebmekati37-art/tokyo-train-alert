@@ -1,20 +1,51 @@
-# Tokyo Train Alert
 
-A Python automation tool that monitors the Yamanote Line for delays using the official ODPT API and sends email alerts.
+# Tokyo Train Alert – Train Delay Monitor
+
+[![Python](https://img.shields.io/badge/Python-3.10-blue)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
+> A Python automation script that periodically checks train delay status (e.g., Tokyo Metro) and sends email alerts when delays are detected.
+
+
+---
+
+## Features
+
+- ⏱️ **Scheduled checks** – runs every 5 minutes (configurable).
+- 📧 **Email alerts** – sends a notification when a delay occurs.
+- 📝 **Logging** – writes all activity to a log file.
+- 🔌 **Pluggable API** – easy to adapt for different train companies (Tokyo Metro, JR East, etc.).
+- 🌐 **Command‑line interface** – simple to configure and run.
+
+---
+
+## Tech Stack
+
+- **Language**: Python 3.10+
+- **Scheduling**: `schedule` library
+- **HTTP Requests**: `requests`
+- **Email**: `smtplib` (Gmail SMTP)
+- **Configuration**: environment variables
+
+---
+
+## Why I Built This
+
+I wanted a reliable way to stay informed about train delays in Tokyo without constantly checking apps. This project shows my ability to build automation tools that interact with external APIs and handle real‑world events.
+
+---
 
 ## Setup Instructions
 
-### 1. Get an ODPT API Key
-- Go to [ODPT Developer Portal](https://developer.odpt.org/)
-- Register and create an application to obtain an API key (acl:consumerKey).
+### Prerequisites
+- Python 3.10+
+- A Gmail account (or any SMTP server)
+- API access to a train status source (e.g., public RSS feed, custom API)
 
-### 2. Gmail SMTP Setup
-- If you use 2-factor authentication, create an **App Password**.
-- If not, enable "Less secure app access" (not recommended). Prefer App Password.
-
-### 3. Clone & Configure
+### Clone and Install
 ```bash
-git clone <repo>
+git clone https://github.com/tayebmekati37-art/tokyo-train-alert.git
 cd tokyo-train-alert
-cp .env.example .env
-# Edit .env with your API key, email credentials, etc.
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
