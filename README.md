@@ -31,7 +31,7 @@
 
 ## Why I Built This
 
-I wanted a reliable way to stay informed about train delays in Tokyo without constantly checking apps. This project shows my ability to build automation tools that interact with external APIs and handle real‑world events.
+I wanted a reliable way to stay informed about train delays in Tokyo without constantly checking apps.
 
 ---
 
